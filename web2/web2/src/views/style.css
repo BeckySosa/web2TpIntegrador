@@ -1,0 +1,83 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    z-index: 2;
+    }
+.card{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card img{
+    max-height: 400px;
+}
+body{
+    background-image: url('/imagenes/museo.jpg');
+}
+.principal h1{
+    color: antiquewhite;
+    padding-top: 50px;
+    
+}
+.principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.buscador {
+    margin-top: 50px;
+    background-color:rgba(243, 220, 245, 0.932);
+    border-radius: 10px;
+    padding: 20px;
+
+}
+.buscador label{
+     padding: 10px;
+
+}
+.btn{
+  margin: 10px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    align-items: center;
+}
+.modal-content img{
+    width: 800px;
+    height: auto;
+    display: block;
+    padding: 20px;
+}
+  
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+  }
+  .sinImagen{
+    background-color: antiquewhite;
+    padding: 20px;
+  }
+    

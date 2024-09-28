@@ -1,0 +1,30 @@
+doctype html  
+html(lang="en")  
+  head  
+    meta(charset="UTF-8")  
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="style.css")  
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet")
+    title Resultados del Museo  
+    
+  body
+    .grid
+      each object in objects
+        .card
+          img(src=object.primaryImage && object.primaryImage != '' ? object.primaryImage : '/imagenes/imgPorDdefect.jpeg' alt=object.title || 'Sin título')
+          .date Fecha: #{object.objectDate || 'Desconocida'}
+          h3= object.title || 'Sin título'
+          p Cultura: #{object.culture || 'Desconocida'}
+          p Dinastía: #{object.dynasty || 'Desconocida'}
+          if object.additionalImages && object.additionalImages.length > 0
+            a.ver-mas(href="#", data-object-id=object.objectID) Ver más
+          else 
+            p.sinImagen Sin imagenes adicionales  
+
+    #modal-imagen.modal(style="display: none;")
+     .modal-content
+       span.close-modal &times;
+       img#modal-image(src="")
+       .contenedor-imagenes-adicionales 
+
+    script(src='function.js')         
